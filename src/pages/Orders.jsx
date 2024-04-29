@@ -248,7 +248,7 @@ const Orders = () => {
       </header>
       <div className="h-[114px] w-[95%]"></div>
 
-      <div className="px-6 pt-6 ">
+      <div className="px-6 pt-6">
         <OrderData />
       </div>
     </>
