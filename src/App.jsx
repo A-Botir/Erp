@@ -62,34 +62,31 @@ const App = () => {
           <div className="flex items-start">
             {!excludePaths.includes(location.pathname) && <Sidebar />}
             <div className="flex-grow">
-              {!authenticated && location.pathname !== "/login" && (
+              {/* {!authenticated && location.pathname !== "/login" && (
                 <Navigate to="/login" />
-              )}
+              )} */}
               <Routes>
-                {authenticated ? (
-                  <>
-                    <Route path="/" element={<Overview />} />
-                    <Route path="*" element={<PageNotFound />} />
-                    <Route path="customers" element={<Customers />} />
-                    <Route path="orders" element={<Orders />} />
-                    <Route path="settings" element={<Settings />} />
-                    <Route path="marketing" element={<Marketing />}>
-                      <Route path="stock" element={<Stock />} />
-                      <Route path="stock/:id" element={<SinglePage />} />
-                      <Route path="banner" element={<Banner />} />
-                      <Route path="banner/:id" element={<SinglePage />} />
-                      <Route path="review" element={<Review />} />
-                      <Route path="review/:id" element={<SinglePage />} />
-                    </Route>
-                    <Route
-                      path="accessforbidden"
-                      element={<AccessForbidden />}
-                    />
-                    <Route path="servererror" element={<ServerError />} />
-                  </>
-                ) : (
+                {/* {authenticated ? ( */}
+                <>
+                  <Route path="/" element={<Overview />} />
+                  <Route path="*" element={<PageNotFound />} />
+                  <Route path="customers" element={<Customers />} />
+                  <Route path="orders" element={<Orders />} />
+                  <Route path="settings" element={<Settings />} />
+                  <Route path="marketing" element={<Marketing />}>
+                    <Route path="stock" element={<Stock />} />
+                    <Route path="stock/:id" element={<SinglePage />} />
+                    <Route path="banner" element={<Banner />} />
+                    <Route path="banner/:id" element={<SinglePage />} />
+                    <Route path="review" element={<Review />} />
+                    <Route path="review/:id" element={<SinglePage />} />
+                  </Route>
+                  <Route path="accessforbidden" element={<AccessForbidden />} />
+                  <Route path="servererror" element={<ServerError />} />
+                </>
+                {/* ) : (
                   <Route path="/login" element={<Login />} />
-                )}
+                )} */}
               </Routes>
             </div>
           </div>
