@@ -62,11 +62,11 @@ const App = () => {
           <div className="flex items-start">
             {!excludePaths.includes(location.pathname) && <Sidebar />}
             <div className="flex-grow">
-              {/* {!authenticated && location.pathname !== "/login" && (
+              {!authenticated && location.pathname !== "/login" && (
                 <Navigate to="/login" />
-              )} */}
+              )}
               <Routes>
-                {/* {authenticated ? ( */}
+                {authenticated ? (
                 <>
                   <Route path="/" element={<Overview />} />
                   <Route path="*" element={<PageNotFound />} />
@@ -84,9 +84,9 @@ const App = () => {
                   <Route path="accessforbidden" element={<AccessForbidden />} />
                   <Route path="servererror" element={<ServerError />} />
                 </>
-                {/* ) : (
+                 ) : (
                   <Route path="/login" element={<Login />} />
-                )} */}
+                )}
               </Routes>
             </div>
           </div>
